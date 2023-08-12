@@ -28,6 +28,7 @@ kotlin {
 
     sourceSets {
         val ktorVersion = "2.3.3"
+        val mokoVersion = "0.16.1"
 
         val commonMain by getting {
             dependencies {
@@ -42,6 +43,9 @@ kotlin {
                 implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+
+                api("dev.icerock.moko:mvvm-core:$mokoVersion")
+                api("dev.icerock.moko:mvvm-compose:$mokoVersion")
             }
         }
         val androidMain by getting {
